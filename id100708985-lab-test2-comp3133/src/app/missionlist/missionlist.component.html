@@ -1,0 +1,10 @@
+<div style="border: solid 1px black; background-Color: #d2e69c; text-align: center;">
+    <div *ngFor="let item of data"  [routerLink] = "['/details', item.flight_number]" routerLinkActive = "active">
+      <p> {{ item.mission_name }} </p>
+      <p> {{ item.mlaunch_year }} </p>
+      <p> {{ item.details }} </p>
+      <p>{{item.flight_number}}</p>
+      <img width="200" alt="patch" [src]= "item.links.mission_patch_small"><br/>
+      <hr>
+    </div>
+  </div>

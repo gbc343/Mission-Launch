@@ -1,0 +1,33 @@
+<div style="border: solid 1px black; background-Color: #d2e69c; text-align: center;">
+    <div *ngFor="let item of data">
+        <div  *ngIf="item.flight_number == missionFlight">
+            <img width="200" alt="patch" [src]= "item.links.mission_patch_small"><br/>
+            <h2>Rocket</h2>
+            <p>Mission Name: {{ item.mission_name }} </p>
+            <p>Rocket Id: {{ item.rocket.rocket_id }} </p>
+            <p>Rocket Name: {{ item.rocket.rocket_name }} </p>
+            <h2>Launch Site</h2>
+            <p>Name: {{item.launch_site.site_name_long}}</p>
+            <h2>Details</h2>
+            <p>{{item.details}}</p>
+            <button style="width:100px; padding:15px; background:lightyellow; font-size: 15px;" (click)="back()">Back</button>
+
+
+        </div>
+
+    </div>
+    <!-- <p>child Component</p>
+    <br>
+    Mission Name: {{ missionName }}
+    <br>
+    Mission Year: {{ missionYear }}
+    <br>
+    Rocket Name: {{ rocketName }}
+    <br>
+    Rocket Type: {{ rocketType }}
+    <br>
+    Launch Site: {{ launchSite }}
+    <br>
+    Launch Details: {{ launchDetails }} -->
+  
+  </div>
